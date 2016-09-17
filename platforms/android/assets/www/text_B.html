@@ -1,0 +1,40 @@
+<html> 
+<head>
+   <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+   <meta charset="utf-8">
+</head>
+<body> 
+<div id="test">
+以下是pos <br />
+</div>
+</body> 
+</html> 
+<script> 
+function getArgs() { 
+   var args = new Object(); 
+   //in this case: 
+   //location = b.htm?aa=1&bb=abc&cc=測試" 
+   //locatin.search = ?aa=1&bb=abc&cc=測試" 
+   var query = location.search.substring(1); //aa=1&bb=abc&cc=測試" 
+   var pairs = query.split("&"); 
+   for(var i=0;i<pairs.length;i++) { 
+      $(document).ready(function() {
+         $("#test").append(pos + "<br />");
+      });
+
+      var pos = pairs[i].indexOf("="); 
+      if (pos == -1) continue; 
+      var argname = pairs[i].substring(0,pos); 
+      var value = pairs[i].substring(pos+1); 
+      args[argname] = decodeURIComponent(value); 
+   } 
+   return args; 
+} 
+var args = getArgs(); 
+if (args.aa) 
+   alert("aa=" + args.aa); 
+if (args.bb) 
+   alert("bb=" + args.bb); 
+if (args.cc) 
+   alert("cc=" + args.cc);        
+</script> 
