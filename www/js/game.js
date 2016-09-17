@@ -1,9 +1,9 @@
-var a = getBingoMathFunc();
+var a = getBingoMathFunc(); //抓取亂數Func
 
-var userArray = new Array(25);
-var computerArray = new Array(25);
-var chioseArray = new Array(25);
-var tempcheck = 0;
+var userArray = new Array(25); //player選取的數字
+var computerArray = new Array(25); //電腦抓取到的亂數
+var chioseArray = new Array(25); //沒用到
+var tempcheck = 0; //暫存選取的數字
 
 var j = 0;
 
@@ -72,79 +72,160 @@ var app = {
         app.computerMove();
     },
     calc_2: function() {
+        tempcheck = userSlefBtn_2.innerHTML;
+        
+        userSlefBtn_2.innerHTML = "";
         app.computerMove();
     },
     calc_3: function() {
+        tempcheck = userSlefBtn_3.innerHTML;
+        
+        userSlefBtn_3.innerHTML = "";
         app.computerMove();
     },
     calc_4: function() {
+        tempcheck = userSlefBtn_4.innerHTML;
+        
+        userSlefBtn_4.innerHTML = "";
         app.computerMove();
     },
     calc_5: function() {
+        tempcheck = userSlefBtn_5.innerHTML;
+        
+        userSlefBtn_5.innerHTML = "";
         app.computerMove();
     },
     calc_6: function() {
+        tempcheck = userSlefBtn_6.innerHTML;
+        
+        userSlefBtn_6.innerHTML = "";
         app.computerMove();
     },
     calc_7: function() {
+        tempcheck = userSlefBtn_7.innerHTML;
+        
+        userSlefBtn_7.innerHTML = "";
         app.computerMove();
     },
     calc_8: function() {
+        tempcheck = userSlefBtn_8.innerHTML;
+        
+        userSlefBtn_8.innerHTML = "";
         app.computerMove();
     },
     calc_9: function() {
+        tempcheck = userSlefBtn_9.innerHTML;
+        
+        userSlefBtn_9.innerHTML = "";
         app.computerMove();
     },
     calc_10: function() {
+        tempcheck = userSlefBtn_10.innerHTML;
+        
+        userSlefBtn_10.innerHTML = "";
         app.computerMove();
     },
     calc_11: function() {
+        tempcheck = userSlefBtn_11.innerHTML;
+        
+        userSlefBtn_11.innerHTML = "";
         app.computerMove();
     },
     calc_12: function() {
+        tempcheck = userSlefBtn_12.innerHTML;
+        
+        userSlefBtn_12.innerHTML = "";
         app.computerMove();
     },
     calc_13: function() {
+        tempcheck = userSlefBtn_13.innerHTML;
+        
+        userSlefBtn_13.innerHTML = "";
         app.computerMove();
     },
     calc_14: function() {
+        tempcheck = userSlefBtn_14.innerHTML;
+        
+        userSlefBtn_14.innerHTML = "";
         app.computerMove();
     },
     calc_15: function() {
+        tempcheck = userSlefBtn_15.innerHTML;
+        
+        userSlefBtn_15.innerHTML = "";
         app.computerMove();
     },
     calc_16: function() {
+        tempcheck = userSlefBtn_16.innerHTML;
+        
+        userSlefBtn_16.innerHTML = "";
         app.computerMove();
     },
     calc_17: function() {
+        tempcheck = userSlefBtn_17.innerHTML;
+        
+        userSlefBtn_17.innerHTML = "";
         app.computerMove();
     },
     calc_18: function() {
+        tempcheck = userSlefBtn_18.innerHTML;
+        
+        userSlefBtn_18.innerHTML = "";
         app.computerMove();
     },
     calc_19: function() {
+        tempcheck = userSlefBtn_19.innerHTML;
+        
+        userSlefBtn_19.innerHTML = "";
         app.computerMove();
     },
-    calc_10: function() {
+    calc_20: function() {
+        tempcheck = userSlefBtn_20.innerHTML;
+        
+        userSlefBtn_20.innerHTML = "";
         app.computerMove();
     },
     calc_21: function() {
+        tempcheck = userSlefBtn_21.innerHTML;
+        
+        userSlefBtn_21.innerHTML = "";
         app.computerMove();
     },
     calc_22: function() {
+        tempcheck = userSlefBtn_22.innerHTML;
+        
+        userSlefBtn_22.innerHTML = "";
         app.computerMove();
     },
     calc_23: function() {
+        tempcheck = userSlefBtn_23.innerHTML;
+        
+        userSlefBtn_23.innerHTML = "";
         app.computerMove();
     },
     calc_24: function() {
+        tempcheck = userSlefBtn_24.innerHTML;
+        
+        userSlefBtn_24.innerHTML = "";
         app.computerMove();
     },
     calc_25: function() {
+        tempcheck = userSlefBtn_25.innerHTML;
+        
+        userSlefBtn_25.innerHTML = "";
         app.computerMove();
     },
     computerMove: function() {
-        
+        for(var i = 1 ; i <26 ; i++)
+        {
+            if(computerArray[i-1] == tempcheck)
+            {
+                // alert(i);
+                computerArray[i-1] = -1;
+                $("#computerBtn_" + i).css("background" , "red");
+            }
+        }
+        app.chioseMath();
     }
 }
 app.initialize();
