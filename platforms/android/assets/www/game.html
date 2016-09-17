@@ -37,10 +37,16 @@
         <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
         <title>BingoGame</title>
     </head>
-    <body>
+    <body onSelectStart="event.returnValue=false">
         <div class="app">
         	<div id="gameStart" class="control">
-	            
+                <p>玩家:</p>
+                <div id="userSelf">
+
+                </div><br /><p>電腦:</p>
+	            <div id="anotherPlayer">
+                    
+                </div>
 	        </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>

@@ -70,7 +70,6 @@ var app = {
     calc_1: function() {
         if (bool_1 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -85,7 +84,6 @@ var app = {
     calc_2: function() {
         if (bool_2 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -100,7 +98,6 @@ var app = {
     calc_3: function() {
         if (bool_3 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -114,7 +111,6 @@ var app = {
     calc_4: function() {
         if (bool_4 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -128,7 +124,6 @@ var app = {
     calc_5: function() {
         if (bool_5 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -142,7 +137,6 @@ var app = {
     calc_6: function() {
         if (bool_6 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -156,7 +150,6 @@ var app = {
     calc_7: function() {
         if (bool_7 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -170,7 +163,6 @@ var app = {
     calc_8: function() {
         if (bool_8 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -184,7 +176,6 @@ var app = {
     calc_9: function() {
         if (bool_9 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -198,7 +189,6 @@ var app = {
     calc_10: function() {
         if (bool_10 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -212,7 +202,6 @@ var app = {
     calc_11: function() {
         if (bool_11 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -226,7 +215,6 @@ var app = {
     calc_12: function() {
         if (bool_12 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -240,7 +228,6 @@ var app = {
     calc_13: function() {
         if (bool_13 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -254,7 +241,6 @@ var app = {
     calc_14: function() {
         if (bool_14 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -268,7 +254,6 @@ var app = {
     calc_15: function() {
         if (bool_15 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -282,7 +267,6 @@ var app = {
     calc_16: function() {
         if (bool_16 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -296,7 +280,6 @@ var app = {
     calc_17: function() {
         if (bool_17 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -310,7 +293,6 @@ var app = {
     calc_18: function() {
         if (bool_18 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -324,7 +306,6 @@ var app = {
     calc_19: function() {
         if (bool_19 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -338,7 +319,6 @@ var app = {
     calc_20: function() {
         if (bool_20 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -352,7 +332,6 @@ var app = {
     calc_21: function() {
         if (bool_21 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -366,7 +345,6 @@ var app = {
     calc_22: function() {
         if (bool_22 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -380,7 +358,6 @@ var app = {
     calc_23: function() {
         if (bool_23 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -394,7 +371,6 @@ var app = {
     calc_24: function() {
         if (bool_24 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -408,7 +384,6 @@ var app = {
     calc_25: function() {
         if (bool_25 == 1)
         {
-            alert("已輸入過數字");
             return;
         }
         if(i <= 9)
@@ -420,7 +395,10 @@ var app = {
         tempNumber[24] = i;
     },
     gmaeStart: function() {
-        document.location.href="game.html?" + tempNumber;
+        if(i!=26)
+            alert("您只選了" + (i-1) + "個數字");
+        else
+            document.location.href="game.html?" + tempNumber;
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

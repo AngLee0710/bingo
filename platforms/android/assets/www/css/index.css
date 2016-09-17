@@ -43,10 +43,14 @@
 }
 body {
     text-align: center;
+    -webkit-user-select: none;   /* for Chrome */
 }
 .control {
-    margin-top: 100px;
+    margin-top: 25px;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 200px;
+}
+p {
+    text-align: left;
 }
